@@ -30,6 +30,9 @@ function leCSV(evt) {
 		var fileLine = fileArr[i].split(';');
 		for ( var j = 0; j < fileLine.length; j++) {
 			strDiv += '<td>' + fileLine[j].trim() + '</td>';
+			if(j==1 && !isNaN(parseInt(fileLine[j]))){
+				totalArquivoTipo1= totalArquivoTipo1 + parseInt(fileLine[j])
+			}
 		}
 		strDiv += '</tr>';
 	}
@@ -55,6 +58,9 @@ function leCSV2(evt) {
 		var fileLine = fileArr[i].split(';');
 		for ( var j = 0; j < fileLine.length; j++) {
 			strDiv += '<td>' + fileLine[j].trim() + '</td>';
+			if(j==2 && !isNaN(parseInt(fileLine[j]))){
+				totalArquivoTipo2+=parseInt(fileLine[j])
+			}
 		}
 		strDiv += '</tr>';
 	}
